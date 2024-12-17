@@ -36,6 +36,43 @@
             <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
 
+    <!-- Dependencia Lombok -->
+    <dependency>
+        <groupId>org.projectlombok</groupId>
+        <artifactId>lombok</artifactId>
+        <version>1.18.24</version> <!-- Usa la última versión disponible -->
+        <scope>provided</scope>
+    </dependency>
+
+    <!-- Dependencia de JPA -->
+    <dependency>
+        <groupId>javax.persistence</groupId>
+        <artifactId>javax.persistence-api</artifactId>
+        <version>2.2</version> <!-- Verifica la versión adecuada -->
+    </dependency>
+
+    <!-- Hibernate (JPA implementation) -->
+    <dependency>
+        <groupId>org.hibernate</groupId>
+        <artifactId>hibernate-core</artifactId>
+        <version>5.4.30.Final</version> <!-- Verifica la versión adecuada -->
+    </dependency> 
+
+<dependency>
+    <groupId>jakarta.servlet</groupId>
+    <artifactId>jakarta.servlet-api</artifactId>
+    <version>5.0.0</version> <!-- O la versión adecuada para tu Tomcat -->
+    <scope>provided</scope>
+</dependency>
+
+<dependency>
+    <groupId>jakarta.servlet.jsp</groupId>
+    <artifactId>jakarta.servlet.jsp-api</artifactId>
+    <version>3.0.0</version> <!-- O la versión adecuada para tu Tomcat -->
+    <scope>provided</scope>
+</dependency>
+
+
         <!-- Spring Boot Starter Security (para JWT) -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -112,6 +149,17 @@
                     <mainClass>com.example.Application</mainClass>
                 </configuration>
             </plugin>
+            
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.8.0</version> <!-- Última versión del plugin -->
+            <configuration>
+                <source>17</source> <!-- Asegúrate de que sea 21 -->
+                <target>17</target> <!-- Asegúrate de que sea 21 -->
+            </configuration>
+        </plugin>
+                    
         </plugins>
     </build>
 
